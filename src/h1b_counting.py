@@ -19,7 +19,7 @@ def count(df,string):
         top_occ = count.loc[count['NUMBER_CERTIFIED_APPLICATIONS'].isin(count['NUMBER_CERTIFIED_APPLICATIONS'].drop_duplicates()[:10])]
     else:
         top_occ = count.loc[count['NUMBER_CERTIFIED_APPLICATIONS'].isin(count['NUMBER_CERTIFIED_APPLICATIONS'].drop_duplicates())]
-    if string == 'SOC_CODE':
+    if string == 'SOC_NAME':
         name = 'TOP_OCCUPATIONS'
     else:
         name = 'TOP_STATES'
@@ -31,7 +31,7 @@ def count(df,string):
 #df = gainData(sys.argv[1])
 df = gainData(sys.argv[1])
 re_states = count(df,'WORKSITE_STATE')
-re_occu = count(df,'SOC_CODE')
+re_occu = count(df,'SOC_NAME')
 re_occu.to_csv(sys.argv[2],sep = ';',index = None)
 re_states.to_csv(sys.argv[3],sep = ';',index = None )
 
