@@ -1,9 +1,16 @@
 # h1b_statistics
+##  Insight Data Engineering Code Challenge   
 
 This challenge is to implement two metrics:
 
-Calculate the total number of times each word has been tweeted.
-Calculate the median number of unique words per tweet, and update this median as tweets come in.
+Top 10 job titles with corresponding number of certified applications and their percentages.    
+Top 10 states with corresponding number of certified applications and their percentages.    
 
-To execute the programs, please execute run.sh as an executable. The output of the programs can be found under tweet_output
+To execute the programs, please execute run.sh as an executable. The output of the programs can be found under OUTPUT founder.  
+The main functions are written in python, see ./src/h1b_counting.py. Workflow of the code:
+
+Import the raw data and the headers;        
+Iterate through all records while counting the number of certified applications for each job title(SOC code) and state, saving in their corresponding dictionary;        
+Sort the dictionaries accordingly;      
+Write the result to corresponding text files.    
 
