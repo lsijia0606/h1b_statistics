@@ -27,7 +27,6 @@ def count(df,string):
     re = top_occ.sort_values(by = ['NUMBER_CERTIFIED_APPLICATIONS',name],ascending = [False,True])
     return re
 
-
 #df = gainData(sys.argv[1])
 df = gainData(sys.argv[1])
 re_states = count(df,'WORKSITE_STATE')
